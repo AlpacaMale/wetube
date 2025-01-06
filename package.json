@@ -6,7 +6,7 @@
     "url": "git+https://github.com/AlpacaMale/wetube.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node index.js"
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "license": "MIT",
   "bugs": {
@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/AlpacaMale/wetube#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
