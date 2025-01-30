@@ -13,6 +13,10 @@ const app = express();
 const home = (req, res) => res.send("I love middlewares");
 const login = (req, res) => res.send("login");
 
+// app setting
+app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views");
+
 // middleware
 app.use(morgan("dev")); // logger
 
