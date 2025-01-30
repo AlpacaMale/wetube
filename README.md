@@ -32,7 +32,7 @@ npm install --save-dev @babel/core @babel/preset-env
 }
 ```
 
-### nodemon
+<div align="center"><h3>nodemon</h3></div>
 
 **설치**
 
@@ -57,7 +57,7 @@ npm install --save-dev nodemon
 npm run dev
 ```
 
-### express
+<div align="center"><h3>express</h3></div>
 
 **설치**
 
@@ -100,7 +100,7 @@ app.get("/", (req, res) => {
 - `:id` 보다 `/upload` 같은 고정된 경로를 먼저 둠
 - `regexpal.com`에서 정규식 테스트 가능
 
-### morgan
+<div align="center"><h3>morgan</h3></div>
 
 **설치**
 
@@ -115,7 +115,7 @@ const morgan = require("morgan");
 app.use(morgan("dev")); // 'dev', 'combined' 등 다양한 로깅 형식 지원
 ```
 
-### pug
+<div align="center"><h3>pug</h3></div>
 
 **설치**
 
@@ -133,6 +133,7 @@ app.set("views", precess.cwd() + "/src/views"); // views 폴더 지정
 - 태그는 소문자로 작성, 속성은 괄호 안에 입력
 - `include` 로 `partial` 파일 불러오기
 - `#{}`로 JS 변수 포함 가능
+- 아규먼트에 변수를 포함할 때에는 `${}` 사용
 
 **템플릿 상속**
 
@@ -162,7 +163,7 @@ app.set("views", precess.cwd() + "/src/views"); // views 폴더 지정
 
 - MVP CSS 활용 가능
 
-### mongodb
+<div align="center"><h3>mongodb</h3></div>
 
 ## 설치
 
