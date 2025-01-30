@@ -6,7 +6,7 @@
 
 ## 기술
 
-### babel
+<div align="center"><h3>babel</h3></div>
 
 **설치**
 
@@ -161,6 +161,8 @@ app.set("views", precess.cwd() + "/src/views"); // views 폴더 지정
 **스타일링**
 
 - MVP CSS 활용 가능
+
+### mongodb
 
 ## 설치
 
