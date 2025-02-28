@@ -1,3 +1,4 @@
+import "./db";
 // const express = require("express"); ugly code
 import express from "express"; // sexy code
 import morgan from "morgan";
@@ -27,6 +28,5 @@ app.use("/users", userRouter);
 app.use("/", globalRouter);
 
 // server on
-const handleListening = () =>
-  console.log(`✅ Server listening on http://localhost:${PORT} 🚀`);
+const handleListening = () => console.log(`✅ Server listening on http://localhost:${PORT} 🚀`);
 app.listen(PORT, handleListening);
