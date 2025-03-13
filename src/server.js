@@ -5,6 +5,7 @@ import morgan from "morgan";
 import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
+import { localsMiddleware } from "./middlewares";
 
 const app = express();
 
@@ -14,8 +15,6 @@ app.set("views", process.cwd() + "/src/views");
 
 // middleware
 app.use(morgan("dev")); // logger
-
-// router setting
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
@@ -24,6 +23,9 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(localsMiddleware);
+
+// router setting
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
 app.use("/", rootRouter);
