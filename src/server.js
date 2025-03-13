@@ -1,5 +1,6 @@
 // const express = require("express"); ugly code
 import express from "express"; // sexy code
+import session from "express-session";
 import morgan from "morgan";
 import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
@@ -16,6 +17,13 @@ app.use(morgan("dev")); // logger
 
 // router setting
 app.use(express.urlencoded({ extended: true }));
+app.use(
+  session({
+    secret: "Hello!",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
 app.use("/", rootRouter);
